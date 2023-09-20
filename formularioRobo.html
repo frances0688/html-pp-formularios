@@ -7,18 +7,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-
+    <header id="reporte">
+        <nav>
+            <a href="./index.html">Hazte miembro del club!</a>
+        </nav>
+        <h1>Reporte de Robo de Bicicleta</h1>
     </header>
     <main>
-        <form action="">
-            <label for="places">¿Cuál es tu sitio favorito?:</label>
-                <select id="places" name="places">
-                    <option value="beach">playa</option>
-                    <option value="mountain">montaña</option>
-                    <option value="cities">ciudades</option>
-                    <option value="parks">parques de atracciones</option>
-                </select>
+        <h2>Complete el siguiente formulario:</h2>
+        <form>
+            <div>
+                <label for="date">Día de incidente:</label>
+                <input type="date" id="date" name="date" placeholder="Fecha" required>
+                <label for="time">Hora de incidente:</label>
+                <input type="time" id="time" name="time" placeholder="Hora" required>
+            </div>
+            <div>
+                <label for="color">Color de la bicicleta:</label>
+                <input type="text" id="color" name="color" placeholder="Color" minlength="3" maxlenght="30" required>
+            </div>
+            <div>
+                <label for="price">Rango de precio</label> <br>
+                <input type="range" id="price" name="price" min="0" max="1000" step="100" list="markers">
+                <datalist id="markers">
+                    <option value="0" label="0"></option>
+                    <option value="200" label="200"></option>
+                    <option value="400" label="400"></option>
+                    <option value="600" label="600"></option>
+                    <option value="800" label="800"></option>
+                    <option value="1000" label="1000"></option>
+                  </datalist>
+            </div>
+            <div>
+                <label for="type">Tipo de Bicicleta:</label>
+                <select id="type" name="type">
+                    <optgroup label="Paseo">
+                        <option value="senorial">Señorial</option>
+                        <option value="antiple">Anti-plebeyos</option>
+                        <option value="hombro">PorEncimaDelHombro</option>
+                    </optgroup>
+                        <optgroup label="Montaña">
+                        <option value="gamusinos">Gamusinos</option>
+                        <option value="flores">Hueleflores Premium</option>
+                        <option value="fango">Fango lover</option>
+                    </optgroup>
+                    </optgroup>
+                        <optgroup label="Carreras">
+                        <option value="metro">Metroymedio</option>
+                        <option value="tresPM">3 de la tarde - Fluorescente Edition</option>
+                        <option value="grupitors">Grupitors</option>
+                </optgroup>
+                </select>   
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Accesorios:</legend>
+                    <select name="accesories" id="accesories" multiple>
+                        <option value="ruedines">Ruedines</option>
+                        <option value="pegatinas">Pegatinas</option>
+                        <option value="cesta">Cestita</option>
+                        <option value="bomba">Bomba de aire</option>
+                        <option value="timbre">Timbre</option>
+                        <option value="foco">Foco</option>
+                    </select>
+                  </fieldset>
+            </div>
+            <div>
+                <label for="marca">¿Qué marca era?:</label>
+                <input list="marcaList" id="marca" name="marca" />
+                <datalist id="marcaList">
+                    <option value="Specialized"></option>
+                    <option value="trek"></option>
+                    <option value="merida"></option>
+                    <option value="scott"></option>
+                    <option value="giant"></option>
+                    <option value="cube"></option>
+                    <option value="lapierre"></option>
+                    <option value="orbea"></option>
+                    <option value="cannondale"></option>
+                    <option value="bmc"></option>
+                    <option value="canyon"></option>
+                    <option value="look"></option>
+                    <option value="protek"></option>
+                    <option value="megamo"></option>
+                    <option value="pinarello"></option>
+                    <option value="bianchi"></option>
+                    <option value="bh"></option>
+                    <option value="factor"></option>
+                    <option value="bghost"></option>
+                    <option value="cervélo"></option>
+                    <option value="fargon"></option>
+                </datalist>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>
 
         </form>
     </main>

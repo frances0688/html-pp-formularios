@@ -14,14 +14,17 @@ textarea {
   box-sizing: border-box;
 }
 
-fieldset {
-    position: relative;
-}
-  
-legend {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+
+datalist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    
+  }
+
+div {
+    margin-top: 3%;
 }
 
 #club>h1 {
